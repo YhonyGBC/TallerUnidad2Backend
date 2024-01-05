@@ -28,7 +28,13 @@ const Mascotas = db.define("Mascotas", {
     estado: {
         type: Sequelize.STRING(50),
         defaultValue: 'Disponible',
-    }
+    },
+    detalle: {
+        type: Sequelize.TEXT
+    },
+    foto: {
+        type: Sequelize.STRING(255)
+    },
 }, {
     timestamps: false,
     createdAt: false,

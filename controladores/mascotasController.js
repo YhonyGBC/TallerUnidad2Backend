@@ -75,6 +75,8 @@ const agregarNuevaMascota = (req, res) => {
         raza: req.body.raza,
         edad: req.body.edad,
         descripcion: req.body.descripcion,
+        detalle: req.body.detalle,
+        foto: req.body.foto,
         estado: req.body.estado
     };
 
@@ -119,6 +121,8 @@ const actualizarMascotaPorId = (req, res) => {
                 mascota.raza = req.body.raza || mascota.raza;
                 mascota.edad = req.body.edad || mascota.edad;
                 mascota.descripcion = req.body.descripcion || mascota.descripcion;
+                mascota.detalle = req.body.detalle || mascota.detalle;
+                mascota.foto = req.body.foto || mascota.foto;
                 mascota.estado = req.body.estado || mascota.estado;
 
                 return mascota.save();

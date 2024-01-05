@@ -1,11 +1,13 @@
 import express from "express";
 import bodyParser from "body-parser";
+import cors from "cors";
 
 import { routerMascotas } from "../rutas/mascotasRouter.js";
 import { routerSolicitudesAdopcion } from "../rutas/solicitudesAdopcionRouter.js";
 import {db} from "../database/conexion.js";
 
 const app = express();
+app.use(cors());
 app.use(bodyParser.json())
 
 //
