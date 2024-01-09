@@ -72,12 +72,12 @@ const agregarNuevaMascota = (req, res) => {
     const dataset = {
         nombre: req.body.nombre,
         tipo: req.body.tipo,
-        raza: req.body.raza,
-        edad: req.body.edad,
-        descripcion: req.body.descripcion,
-        detalle: req.body.detalle,
-        foto: req.body.foto,
-        estado: req.body.estado
+        raza: req.body.raza || "",
+        edad: req.body.edad || "",
+        descripcion: req.body.descripcion || "",
+        detalle: req.body.detalle || "",
+        foto: req.body.foto || "",
+        estado: req.body.estado || "Disponible"
     };
 
     Mascotas.create(dataset)

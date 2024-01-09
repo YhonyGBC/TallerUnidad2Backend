@@ -4,6 +4,7 @@ import cors from "cors";
 
 import { routerMascotas } from "../rutas/mascotasRouter.js";
 import { routerSolicitudesAdopcion } from "../rutas/solicitudesAdopcionRouter.js";
+import { routerAdministradores } from "../rutas/administradoresRouter.js";
 import {db} from "../database/conexion.js";
 
 const app = express();
@@ -23,6 +24,7 @@ app.get("/lascan", (req, res) => {
 
 app.use("/mascotas", routerMascotas);
 app.use("/solicitudesAdopcion", routerSolicitudesAdopcion);
+app.use("/administradores", routerAdministradores);
 
 //
 const PORT = 8000;
